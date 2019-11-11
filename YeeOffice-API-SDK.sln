@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YeeOfficeSDK", "YeeOfficeSDK\YeeOfficeSDK.csproj", "{F42F452E-B0F4-4B3E-B774-C6E10493A1B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YeeOfficeSDKUnitTest", "YeeOfficeSDKUnitTest\YeeOfficeSDKUnitTest.csproj", "{750EC1BC-2BEE-47A8-9714-E5495EB173AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F42F452E-B0F4-4B3E-B774-C6E10493A1B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F42F452E-B0F4-4B3E-B774-C6E10493A1B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F42F452E-B0F4-4B3E-B774-C6E10493A1B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F42F452E-B0F4-4B3E-B774-C6E10493A1B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{750EC1BC-2BEE-47A8-9714-E5495EB173AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{750EC1BC-2BEE-47A8-9714-E5495EB173AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{750EC1BC-2BEE-47A8-9714-E5495EB173AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{750EC1BC-2BEE-47A8-9714-E5495EB173AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A19E4DDB-04E8-4D6E-903D-E5148A7932F5}
+	EndGlobalSection
+EndGlobal
