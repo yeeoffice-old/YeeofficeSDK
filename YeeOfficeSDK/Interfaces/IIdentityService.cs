@@ -9,6 +9,9 @@ namespace YeeOfficeSDK.Interfaces
 {
     public partial interface IAkmiiRepository
     {
+        Task<ResponseMessage<string>> UserInfoAddAsync(UserInfoAddRequest request);
+        Task<ResponseMessage<string>> UserInfoChangeAsync(UserInfoChangeRequest request);
+
         Task<ResponseMessage<List<UserInfo>>> UserInfoSearchAsync(UserInfoSearchRequest request);
         Task<ResponseMessage<List<UserInfo>>> UserInfoSearchByWhereAsync(UserInfoSearchByWhereRequest request);
         Task<ResponseMessage<UserInfo>> UserInfoGetByAccountIDAsync(long accountID);

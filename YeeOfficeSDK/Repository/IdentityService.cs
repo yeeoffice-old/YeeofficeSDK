@@ -11,6 +11,25 @@ namespace YeeOfficeSDK.Repository
 {
     public partial class AkmiiRepository : IAkmiiRepository
     {
+        public Task<ResponseMessage<string>> UserInfoAddAsync(UserInfoAddRequest request)
+        {
+            var apiUrl = new AkmiiApiUrl
+            {
+                Method = "POST",
+                Url = _context.DomainUrl + "/YeeOfficeSettings/_api/ver(3.0)/admin/userinfo"
+            };
+            return GetResponseAsync<ResponseMessage<string>>(apiUrl, request.Convert2Json());
+        }
+        public Task<ResponseMessage<string>> UserInfoChangeAsync(UserInfoChangeRequest request)
+        {
+            var apiUrl = new AkmiiApiUrl
+            {
+                Method = "PUT",
+                Url = _context.DomainUrl + "/YeeOfficeSettings/_api/ver(3.0)/admin/userinfo"
+            };
+            return GetResponseAsync<ResponseMessage<string>>(apiUrl, request.Convert2Json());
+        }
+
         public Task<ResponseMessage<List<UserInfo>>> UserInfoSearchAsync(UserInfoSearchRequest request)
         {
             var apiUrl = new AkmiiApiUrl

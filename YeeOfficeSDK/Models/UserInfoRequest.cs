@@ -25,4 +25,20 @@ namespace YeeOfficeSDK.Models
     {
         public List<ListDataWhereRequest> Wheres { get; set; }
     }
+
+    public class UserInfoAddRequest
+    {
+        public string Password { get; set; }
+        public int AccountType { get; set; }
+        public bool FirstLogin { get; set; }
+        public Dictionary<string, string> Attrs { get; set; }
+    }
+    public class UserInfoChangeRequest
+    {
+        public long AccountID { get; set; }
+        public int Version { get; set; }
+        public long OldDepartmentID { get; set; }
+        public long DepartmentID { get; set; }
+        public Dictionary<string, string> Attrs { get; set; }
+    }
 }
