@@ -11,6 +11,7 @@ namespace YeeOfficeSDK.Repository
 {
     public partial class AkmiiRepository : IAkmiiRepository
     {
+        #region Admin User API
         public Task<ResponseMessage<string>> UserInfoAddAsync(UserInfoAddRequest request)
         {
             var apiUrl = new AkmiiApiUrl
@@ -29,7 +30,47 @@ namespace YeeOfficeSDK.Repository
             };
             return GetResponseAsync<ResponseMessage<string>>(apiUrl, request.Convert2Json());
         }
+        public Task<ResponseMessage<string>> UserInfoRemoveAsync(List<UserInfoRemoveRequest> list)
+        {
+            var apiUrl = new AkmiiApiUrl
+            {
+                Method = "PUT",
+                Url = _context.DomainUrl + "/YeeOfficeSettings/_api/ver(3.0)/admin/userinfo/Remove"
+            };
+            var request = new UserInfoRemovesRequest(list);
+            return GetResponseAsync<ResponseMessage<string>>(apiUrl, request.Convert2Json());
+        }
+        public Task<ResponseMessage<bool>> UserInfoEnableAsync(UserInfoAccountIDsRequest request)
+        {
+            var apiUrl = new AkmiiApiUrl
+            {
+                Method = "PUT",
+                Url = _context.DomainUrl + "/YeeOfficeSettings/_api/ver(3.0)/admin/userinfo/enable"
+            };
+            return GetResponseAsync<ResponseMessage<bool>>(apiUrl, request.Convert2Json());
+        }
+        public Task<ResponseMessage<bool>> UserInfoDisableAsync(UserInfoAccountIDsRequest request)
+        {
+            var apiUrl = new AkmiiApiUrl
+            {
+                Method = "PUT",
+                Url = _context.DomainUrl + "/YeeOfficeSettings/_api/ver(3.0)/admin/userinfo/disable"
+            };
+            return GetResponseAsync<ResponseMessage<bool>>(apiUrl, request.Convert2Json());
+        }
+        public Task<ResponseMessage<string>> UserInfoMoveOrgAsync(UserInfoMoveOrgRequest data)
+        {
+            var apiUrl = new AkmiiApiUrl
+            {
+                Method = "PUT",
+                Url = _context.DomainUrl + "/YeeOfficeSettings/_api/ver(3.0)/admin/userinfo/move"
+            };
+            var request = new UserInfoMoveRequest(data);
+            return GetResponseAsync<ResponseMessage<string>>(apiUrl, request.Convert2Json());
+        }
+        #endregion
 
+        #region User API
         public Task<ResponseMessage<List<UserInfo>>> UserInfoSearchAsync(UserInfoSearchRequest request)
         {
             var apiUrl = new AkmiiApiUrl
@@ -39,7 +80,6 @@ namespace YeeOfficeSDK.Repository
             };
             return GetResponseAsync<ResponseMessage<List<UserInfo>>>(apiUrl, request.Convert2Json());
         }
-
         public Task<ResponseMessage<List<UserInfo>>> UserInfoSearchByWhereAsync(UserInfoSearchByWhereRequest request)
         {
             var apiUrl = new AkmiiApiUrl
@@ -49,7 +89,6 @@ namespace YeeOfficeSDK.Repository
             };
             return GetResponseAsync<ResponseMessage<List<UserInfo>>>(apiUrl, request.Convert2Json());
         }
-
         public Task<ResponseMessage<UserInfo>> UserInfoGetByAccountIDAsync(long accountID)
         {
             var apiUrl = new AkmiiApiUrl
@@ -86,5 +125,6 @@ namespace YeeOfficeSDK.Repository
             };
             return GetResponseAsync<ResponseMessage<UserInfo>>(apiUrl, null);
         }
+        #endregion
     }
 }

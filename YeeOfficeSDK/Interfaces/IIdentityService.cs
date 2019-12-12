@@ -11,6 +11,10 @@ namespace YeeOfficeSDK.Interfaces
     {
         Task<ResponseMessage<string>> UserInfoAddAsync(UserInfoAddRequest request);
         Task<ResponseMessage<string>> UserInfoChangeAsync(UserInfoChangeRequest request);
+        Task<ResponseMessage<string>> UserInfoRemoveAsync(List<UserInfoRemoveRequest> list);
+        Task<ResponseMessage<bool>> UserInfoEnableAsync(UserInfoAccountIDsRequest request);
+        Task<ResponseMessage<bool>> UserInfoDisableAsync(UserInfoAccountIDsRequest request);
+        Task<ResponseMessage<string>> UserInfoMoveOrgAsync(UserInfoMoveOrgRequest data);
 
         Task<ResponseMessage<List<UserInfo>>> UserInfoSearchAsync(UserInfoSearchRequest request);
         Task<ResponseMessage<List<UserInfo>>> UserInfoSearchByWhereAsync(UserInfoSearchByWhereRequest request);
