@@ -58,8 +58,10 @@
     <Compile Include="Interfaces\IAkmiiRepository.cs" />
     <Compile Include="Interfaces\ICustomData.cs" />
     <Compile Include="Interfaces\ICustomDefinition.cs" />
+    <Compile Include="Interfaces\ICustomLayout.cs" />
     <Compile Include="Interfaces\IDocumentNet.cs" />
     <Compile Include="Interfaces\IIdentityService.cs" />
+    <Compile Include="Interfaces\ICustomList.cs" />
     <Compile Include="Models\AkmiiFileInfo.cs" />
     <Compile Include="Models\CustomDataGetListRequest.cs" />
     <Compile Include="Models\DocumentNetRequest.cs" />
@@ -68,12 +70,16 @@
     <Compile Include="Models\ListDataEditRequest.cs" />
     <Compile Include="Models\ListDataWhereRequest.cs" />
     <Compile Include="Models\ListDefinitionModel.cs" />
+    <Compile Include="Models\CustomListModel.cs" />
+    <Compile Include="Models\ListLayoutRequest.cs" />
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Models\UserInfoRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AkmiiRepository.cs" />
     <Compile Include="Repository\CustomData.cs" />
     <Compile Include="Repository\CustomDefinition.cs" />
+    <Compile Include="Repository\CustomLayout.cs" />
+    <Compile Include="Repository\CustomList.cs" />
     <Compile Include="Repository\DocumentNet.cs" />
     <Compile Include="Repository\IdentityService.cs" />
     <Compile Include="ResponseMessage.cs" />
